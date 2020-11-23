@@ -21,6 +21,7 @@ public class WebConfig implements WebMvcConfigurer {
     public WebConfig(ApplicationContext applicationContext) {
         this.applicationContext = applicationContext;
     }
+
     @Bean
     public SpringResourceTemplateResolver templateResolver() {
         SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
@@ -37,7 +38,6 @@ public class WebConfig implements WebMvcConfigurer {
         templateEngine.setEnableSpringELCompiler(true);
         return templateEngine;
     }
-//39 строка помогла с русским
 
     @Override
     public void configureViewResolvers(ViewResolverRegistry registry) {
@@ -48,5 +48,4 @@ public class WebConfig implements WebMvcConfigurer {
         registry.viewResolver(resolver);
     }
 }
-// 49 и 50 строка помогла с русским
 
